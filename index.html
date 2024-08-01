@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Special Message for my Rona</title>
+    <title>Love Story Toystory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -16,13 +16,11 @@
             background-image: url("https://i.postimg.cc/dtnfMN6c/IMG-20211103-181126-886.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            animation: none;
-            transition: all .3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 140vh;
+            height: 100vh;
             margin: 0;
             color: #fff;
         }
@@ -78,140 +76,115 @@
         }
         input[type="text"]::placeholder {
             color: black;
-            /* Change the placeholder color to black */
         }
         input[type="text"] {
-    color: black;
-    font-family: 'Courier New', monospace;
-        }
+            color: black;
+            font-family: 'Courier New', monospace;
         }
     </style>
 </head>
 <body>
 <div id="content">
     <div class="photo">
-        <img id="ftKm" src="https://i.postimg.cc/0jyyvR8J/images.jpg" width="100px" height="100px" onClick="clickPhoto();"/>
-        <span style="font-weight:700;font-size: 13px" id="sp1">
-            <div id="heart" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div>
-        </span>
+        <img id="ftKm" src="https://i.postimg.cc/0jyyvR8J/images.jpg" width="100" height="100" alt="Photo" onclick="clickPhoto();"/>
+        <div id="sp1" style="font-weight:700;font-size: 13px;">
+            <div id="heart">&#9829;</div>
+        </div>
         <div id="sp2" style="display:none;">
-            <span style="font-weight:700;font-size: 13px" id="finish"></span>
+            <span id="finish" style="font-weight:700;font-size: 13px;"></span>
         </div>
     </div>
-    <div id='scrollImage'>
-        <p>Hi&nbsp;<b id="you"></b>&nbsp;sweetie 💓</p>
-        <p>Ilove you!!💓</p>
+    <div id="scrollImage">
+        <p>Hi <b id="you"></b> sweetie 💓</p>
+        <p>I love you!! 💓</p>
         <p>Who’s celebrating today?</p>
         <p>I just want to say that if</p>
         <p>I don’t reply to your chat, it means</p>
-        <p>I’m hacking or coding!<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/AlUwZp0ih_wAAAAi/pentol-quby.gif" height="70"/></p>
+        <p>I’m building command or fixing bug!<img src="https://c.tenor.com/AlUwZp0ih_wAAAAi/pentol-quby.gif" alt="Pentol" height="70"/></p>
         <p>Oh yeah</p>
         <p>If my attitude suddenly changes</p>
         <p>I’m sorry, okay</p>
         <p>because sometimes I’m indifferent</p>
         <p>sometimes attentive</p>
-        <p><img style="margin-right:10px;" alt="Pentol" src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" height="70"/>
-            Okeyy?</p>
-        <p>Wish you all the best&nbsp;<span id="wrnRed">💓</span></p>
+        <p><img src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" alt="Pentol" height="70"/> Okeyy?</p>
+        <p>Wish you all the best <span id="wrnRed">💓</span></p>
         <p>That's all &#10084;&#65039;</p>
-        <p>Click the photo above~<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/oQ_6wxtMrx0AAAAi/pentol-quby.gif" height="70"/></p>
+        <p>Click the photo above~<img src="https://c.tenor.com/oQ_6wxtMrx0AAAAi/pentol-quby.gif" alt="Pentol" height="70"/></p>
     </div>
-
     <div id="contButton" style="display:none;">
-        <a class='button' onClick='openFb();'>Send</a>
+        <a class="button" onclick="openFb();">Send</a>
     </div>
 </div>
-
-<footer>Made with 💓 herudev</footer>
-
+<footer>Made with 💓</footer>
 <audio autoplay loop>
-        <source src="https://f.top4top.io/m_3135uarx00.mp4" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-<script>  
-var a = 0, finish;
-finish = "Happy Girlfriend Day";
-            
-// Facebook Messenger Option
-function openFb(){
-    window.location = "https://m.me/?text=Hello%20Mr�AmiR%20, I " + "*" + name + "*" + "%0A%0A" + "*" + name + "*" + " have read everything. Thank you so much" + " *" + author + "* " + "for making all of this><" + "%0A%0A" + "*" + "Sent:" + "*" + "%20" + dateTime;
-} 
-</script>
- 
-<script type="text/javascript">            
-var today = new Date();
-var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + '.';
-var dateTime = date;
-const swals = Swal.mixin({
-    cancelButtonColor: '#909090',
-    confirmButtonColor: '#00B487',
-    allowOutsideClick: false,
-});
+    <source src="https://f.top4top.io/m_3135uarx00.mp4" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    let attempts = 0;
+    const maxAttempts = 10;
+    let finishMessage = "Happy Girlfriend Day";
 
-async function start(){
-    var { value: name } = await swals.fire({
-        title: 'Your name?',
-        input: 'text',
-        confirmButtonText: 'Continue',
-        showCancelButton: false,
-    });                           
-    if(name){
-        window.name = name;
-        finish = finish + ", " + name + "!";    
-        document.getElementById("you").innerHTML = "" + window.name;                      
-        var { value: author } = await swals.fire({
-            title: name + ', Your boyfriend name?',
+    function openFb() {
+        const message = `Hello Mr. AmiR, I *${window.name}*\n\n*${window.name}* have read everything. Thank you so much *${window.author}* for making all of this><\n\n*Sent:* ${new Date().toLocaleString()}`;
+        window.location.href = `https://m.me/?text=${encodeURIComponent(message)}`;
+    }
+
+    async function start() {
+        const { value: name } = await Swal.fire({
+            title: 'Your name?',
             input: 'text',
             confirmButtonText: 'Continue',
             showCancelButton: false,
-        });                
-        if(author != name){
-            document.getElementById("sp1").innerHTML = "From " + author + ", To " + window.name + "!";
-            window.author = author;                   
-            await swals.fire(`Now look at this 💓`);
-            setTimeout(showDiv, 100);
+        });
+
+        if (name) {
+            window.name = name;
+            finishMessage += `, ${name}!`;
+            document.getElementById("you").textContent = name;
+
+            const { value: author } = await Swal.fire({
+                title: `${name}, Your boyfriend's name?`,
+                input: 'text',
+                confirmButtonText: 'Continue',
+                showCancelButton: false,
+            });
+
+            if (author && author !== name) {
+                document.getElementById("sp1").innerHTML = `From ${author}, To ${name}!`;
+                window.author = author;
+                await Swal.fire('Now look at this 💓');
+                showDiv();
+            } else {
+                await Swal.fire('Name cannot be empty/same as your name!');
+                start();
+            }
         } else {
-            await swals.fire('Name cannot be empty/same as your name!');
+            await Swal.fire('Name cannot be empty, okay!');
             start();
         }
-    } else {
-        await swals.fire('Name cannot be empty, okay!');
-        start();
     }
-}
 
-// Start function
-start()            
-</script>
-<script>
-function hideDiv() {
-    document.getElementById('content').style.opacity = "0";
-}
-
-function showDiv() {
-    document.getElementById('content').style.opacity = "1";
-    document.getElementById('content').style.top = "0";
-    document.querySelector("body").style.animation = "anim 9s ease infinite";
-}
-
-function button() {
-    document.getElementById('contButton').style.display = "block";
-    document.getElementById('contButton').style.opacity = "1";
-    var e1 = document.getElementById('ftKm');
-    e1.classList.add("degdeg");
-}  
-
-function clickPhoto() {
-    document.getElementById('sp1').style.display = "none";
-    document.getElementById('sp2').style.display = "block";
-    if (a < 10) {
-        a++;
-        document.getElementById("finish").innerHTML = finish;
-    } else {
-        document.getElementById("heart").innerHTML = "&#10084;&#65039;";
-        setTimeout(button, 400);
+    function showDiv() {
+        const content = document.getElementById('content');
+        content.style.opacity = "1";
+        document.body.style.animation = "anim 9s ease infinite";
     }
-}
+
+    function clickPhoto() {
+        document.getElementById('sp1').style.display = "none";
+        document.getElementById('sp2').style.display = "block";
+
+        if (attempts < maxAttempts) {
+            attempts++;
+            document.getElementById("finish").textContent = finishMessage;
+        } else {
+            document.getElementById("heart").innerHTML = "&#10084;&#65039;";
+            setTimeout(() => document.getElementById('contButton').style.display = "block", 400);
+        }
+    }
+
+    start();
 </script>
 </body>
 </html>
